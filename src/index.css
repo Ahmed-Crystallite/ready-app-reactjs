@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+html,
+body{
+    font-family: "Manrope", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(236, 233, 233);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0165FC;
+}
