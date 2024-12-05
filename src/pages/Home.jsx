@@ -1,5 +1,10 @@
-import Hero from "../../public/home/hero.svg"
+// Components
+
 import CTA from "../components/CTA"
+import { ProgessBar } from "../components"
+
+// Images
+import Hero from "../../public/home/hero.svg"
 import Banner1 from "../../public/home/foldTwo.png"
 import Banner2 from "../../public/home/foldThree.png"
 import Banner3 from "../../public/home/foldFour.png"
@@ -10,6 +15,9 @@ import Icon4 from "../../public/home/icons/4.png"
 import Banner4 from "../../public/home/foldSix.png"
 import Banner5 from "../../public/home/foldSeven.png"
 import Curve from "../../public/home/curve.png"
+import Avater from "../../public/home/icons/avater.svg"
+import SemiCol from "../../public/home/icons/semiCol.svg"
+import Stars from "../../public/home/icons/stars.svg"
 
 const Home = () => {
   return (
@@ -142,7 +150,10 @@ const Home = () => {
                 "Lorem ipsum dolor sit amet consectetur. Morbi nibh ut in",
                 "Lorem ipsum dolor sit amet consectetur. Morbi nibh ut in",
               ].map((e, i) => (
-                <div key={i} className="transition-all ease-in-out duration-300 group border-t-[3px] border-secondary hover:border-primary">
+                <div
+                  key={i}
+                  className="transition-all ease-in-out duration-300 group border-t-[3px] border-secondary hover:border-primary"
+                >
                   <div className="sm:mt-10 mt-5 md:max-w-[430px] text-secondary">
                     <h3 className="transition-all ease-in-out duration-300 md:text-[22px] text-[18px] font-bold leading-tight mb-3 group-hover:text-black">
                       {e}
@@ -206,6 +217,68 @@ const Home = () => {
                   orci ut. Mauris pretium tellus quis et elit aliquam nulla.
                 </p>
                 <CTA css="sm:mt-10 mt-5" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="xl:pt-[100px] md:py-[80px] sm:py-[60px] py-[40px]">
+          <div className="container">
+            <div className="text-center">
+              <span className="block text-primary md:text-[22px] sm:text-[18px] text-[16px] font-semibold leading-tight">
+                Testimonials
+              </span>
+              <h2 className="lg:text-[36px] md:text-[30px] sm:text-[20px] text-[18px] font-bold leading-tight sm:mt-4 mt-3">
+                Our Customers Love What We Do
+              </h2>
+            </div>
+            <ProgessBar
+              emblaWrapper="flex pt-[50px] lg:pt-[100px]"
+              arrowsCss="relative xl:top-[-220px] z-10 items-center"
+              options={{ loop: false }}
+            >
+              {[
+                "Ruben Franci",
+                "Ruben Franci",
+                "Ruben Franci",
+                "Ruben Franci",
+                "Ruben Franci",
+                "Ruben Franci",
+              ].map((e, i) => (
+                <div
+                  key={i}
+                  className="relative z-10 grow-0 shrink-0 basis-full text-center"
+                >
+                  <span className="block bg-primary/10 absolute inset-[80px_0_0_0] -z-10 xl:w-[30%] lg:w-[40%] md:w-[50%] w-[70%] mx-auto h-full"></span>
+                  <img src={Avater} alt="avater" className="mx-auto" />
+                  <img src={SemiCol} alt="icon" className="mx-auto my-4" />
+                  <p className="text-secondary lg:text-[16px] text-[14px] leading-normal font-medium max-w-[1000px] mx-auto">
+                    Lorem ipsum dolor sit amet consectetur. Sed a nulla eget
+                    arcu urna nec magnis. Neque suscipit tincidunt purus nullam
+                    interdum sed adipiscing vitae. Lobortis eu lacinia
+                    adipiscing orci ut. Mauris pretium tellus quis et elit
+                    aliquam nulla.
+                  </p>
+                  <div className="text-center  my-10">
+                    <h4 className="text-black text-[22px] leading-tight font-semibold mb-2">
+                      {e}
+                    </h4>
+                    <img src={Stars} alt="icon" className="mx-auto" />
+                  </div>
+                </div>
+              ))}
+            </ProgessBar>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="">
+          <div className="container">
+            <div className="bg-primary">
+              <div className="flex items-center justify-between max-w-[1150px] mx-auto text-white h-[170px]">
+                <h2 className="2xl:text-[50px] xl:text-[45px] lg:text-[35px] md:text-[30px] text-[25px] font-bold leading-tight">Ready For Your Next Hire?</h2>
+                <CTA css="!text-primary !bg-white mx-auto !border-white hover:!text-white hover:!bg-transparent px-12" />
               </div>
             </div>
           </div>

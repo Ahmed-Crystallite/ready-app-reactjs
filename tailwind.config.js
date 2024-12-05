@@ -31,7 +31,8 @@ export default {
       },
       colors:{
         "primary" : "#0165FC",
-        "secondary" : "#73858F"
+        "secondary" : "#73858F",
+        "orange" : "#FDC603"
       }
     },
   },

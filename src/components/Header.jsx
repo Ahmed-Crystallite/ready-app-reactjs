@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Logo from "../assets/logo.svg"
+import { Link, NavLink } from "react-router-dom"
 const Header = () => {
   const [openIndex, setOpenIndex] = useState(false)
   return (
@@ -13,9 +14,9 @@ const Header = () => {
                   key={i}
                   className="text-sm text-white font-semibold leading-tight transition-all duration-500 ease-in-out hover:opacity-70"
                 >
-                  <a href="#" className="block capitalize">
+                  <Link to="#" className="block capitalize">
                     {e}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -23,25 +24,38 @@ const Header = () => {
         </div>
         <div className="container">
           <div className="flex items-center justify-between py-5">
-            <a href="/" className="block">
+            <Link to="/" className="block">
               <img src={Logo} alt="logo" />
-            </a>
+            </Link>
             <ul className="md:flex hidden items-center gap-x-8">
               {[
-                "Home",
-                "Post a Job",
-                "Subscription",
-                "Find Candidates",
-                "Blogs",
-              ].map((e, i) => (
+                ["/", "Home"],
+                ["/post-job", "Post a Job"],
+                ["/subscription", "Subscription"],
+                ["/find-candidates", "Find Candidates"],
+                ["/blogs", "Blogs"],
+              ].map(([link, text], i) => (
                 <li
                   key={i}
                   className="relative group overflow-hidden text-sm text-black font-semibold leading-tight transition-all duration-500 ease-in-out hover:text-primary"
                 >
-                  <a href="#" className="block capitalize mb-1">
-                    <span className="block w-full h-[2px] rounded absolute -bottom-0 transition-all ease-in-out duration-500 -translate-x-full group-hover:translate-x-0 bg-primary"></span>
-                    {e}
-                  </a>
+                  <NavLink
+                    to={link}
+                    className={({ isActive }) =>
+                      `block capitalize mb-1 ${isActive ? "text-primary" : ""}`
+                    }
+                  >
+                    {({ isActive }) => (
+                      <>
+                        <span
+                          className={`block w-full h-[2px] rounded absolute -bottom-0 transition-all ease-in-out duration-500 ${
+                            isActive ? "translate-x-0" : "-translate-x-full"
+                          } group-hover:translate-x-0 bg-primary`}
+                        ></span>
+                        {text}
+                      </>
+                    )}
+                  </NavLink>
                 </li>
               ))}
             </ul>
