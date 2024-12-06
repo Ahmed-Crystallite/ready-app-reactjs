@@ -9,13 +9,17 @@ const Header = () => {
         <div className="bg-primary py-3">
           <div className="container">
             <ul className="flex items-center md:justify-end justify-center gap-x-8">
-              {["Help Center", "Sign Up", "Login"].map((e, i) => (
+              {[
+                ["/help-center","Help Center"],
+                ["/sign-up","Sign Up"],
+                ["/login","Login"]
+              ].map(([link,text], i) => (
                 <li
                   key={i}
                   className="text-sm text-white font-semibold leading-tight transition-all duration-500 ease-in-out hover:opacity-70"
                 >
-                  <Link to="#" className="block capitalize">
-                    {e}
+                  <Link to={link} className="block capitalize">
+                    {text}
                   </Link>
                 </li>
               ))}

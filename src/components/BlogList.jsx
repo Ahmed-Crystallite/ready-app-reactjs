@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom"
-import Blog1 from "../../public/blogs/truck1.svg"
-import Blog2 from "../../public/blogs/truck2.svg"
-import Blog3 from "../../public/blogs/truck3.svg"
-import Blog4 from "../../public/blogs/wearHouse.svg"
-import Blog5 from "../../public/blogs/truck5.svg"
-import Blog6 from "../../public/blogs/truck6.svg"
-import Blog7 from "../../public/blogs/truck7.svg"
-import Blog8 from "../../public/blogs/truck8.svg"
-import Blog9 from "../../public/blogs/truck9.svg"
-import Blog10 from "../../public/blogs/truck10.svg"
-import Blog11 from "../../public/blogs/truck11.svg"
-import Blog12 from "../../public/blogs/truck12.svg"
+import Blog1 from "media/blogs/truck1.svg"
+import Blog2 from "media/blogs/truck2.svg"
+import Blog3 from "media/blogs/truck3.svg"
+import Blog4 from "media/blogs/wearHouse.svg"
+import Blog5 from "media/blogs/truck5.svg"
+import Blog6 from "media/blogs/truck6.svg"
+import Blog7 from "media/blogs/truck7.svg"
+import Blog8 from "media/blogs/truck8.svg"
+import Blog9 from "media/blogs/truck9.svg"
+import Blog10 from "media/blogs/truck10.svg"
+import Blog11 from "media/blogs/truck11.svg"
+import Blog12 from "media/blogs/truck12.svg"
 const BlogList = () => {
   const data = [
     {
@@ -132,7 +132,7 @@ const BlogList = () => {
                     key={index}
                     className="shadow-[8px_11px_19px_rgba(121,_138,_164,_0.15)] border border-[rgba(121,_138,_164,_0.2)] rounded-[20px] p-1"
                   >
-                    <img src={post.img} alt={post.title} />
+                    <img src={post.img} alt={post.title} className="w-full" />
                     <div className="2xl:px-4 px-2 my-4">
                       <span className="inline-block bg-orange font-bold text-sm leading-tight px-3 py-1 rounded-full">
                         {post.name}

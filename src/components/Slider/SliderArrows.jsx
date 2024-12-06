@@ -1,8 +1,8 @@
 // React
 import React, { useCallback, useEffect, useState } from "react"
 // Media
-import PrevArrow from "../../../public/home/icons/left-arrow.svg"
-import NextArrow from "../../../public/home/icons/right-arrow.svg"
+import PrevArrow from "media/home/icons/left-arrow.svg"
+import NextArrow from "media/home/icons/right-arrow.svg"
 
 export const usePrevNextButtons = (emblaApi) => {
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)

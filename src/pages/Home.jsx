@@ -1,29 +1,62 @@
+// Hooks
+
+import { Link } from "react-router-dom"
+
 // Components
 
-import CTA from "../components/CTA"
-import { ProgessBar } from "../components"
-
+import CTA from "@/components/CTA"
+import { ProgessBar } from "@/components"
 // Images
-import Hero from "../../public/home/hero.svg"
-import Banner1 from "../../public/home/foldTwo.png"
-import Banner2 from "../../public/home/foldThree.png"
-import Banner3 from "../../public/home/foldFour.png"
-import Icon1 from "../../public/home/icons/1.png"
-import Icon2 from "../../public/home/icons/2.png"
-import Icon3 from "../../public/home/icons/3.png"
-import Icon4 from "../../public/home/icons/4.png"
-import Banner4 from "../../public/home/foldSix.png"
-import Banner5 from "../../public/home/foldSeven.png"
-import Curve from "../../public/home/curve.png"
-import Avater from "../../public/home/icons/avater.svg"
-import SemiCol from "../../public/home/icons/semiCol.svg"
-import Stars from "../../public/home/icons/stars.svg"
+import Hero from "media/home/hero.svg"
+import Banner1 from "media/home/foldTwo.png"
+import Banner2 from "media/home/foldThree.png"
+import Banner3 from "media/home/foldFour.png"
+import Icon1 from "media/home/icons/1.png"
+import Icon2 from "media/home/icons/2.png"
+import Icon3 from "media/home/icons/3.png"
+import Icon4 from "media/home/icons/4.png"
+import Banner4 from "media/home/foldSix.png"
+import Banner5 from "media/home/foldSeven.png"
+import Curve from "media/home/curve.png"
+import Avater from "media/home/icons/avater.svg"
+import SemiCol from "media/home/icons/semiCol.svg"
+import Stars from "media/home/icons/stars.svg"
+import Blog4 from "media/blogs/wearHouse.svg"
+import Blog5 from "media/blogs/truck5.svg"
+import Blog6 from "media/blogs/truck6.svg"
 
 const Home = () => {
+  const data = [
+    {
+      img: Blog4,
+      name: "Jaydon George",
+      title: "Lorem ipsum dolor sit amet consectetur. Morbi nibh ut in quis et",
+      desc: "Lorem ipsum dolor sit amet consectetur. Morbi nibh ut in quis et hendrerit est. At sem eu dolor sed id adipiscing viverra.",
+      link: "Read More",
+      slug: "four-blog-post",
+    },
+    {
+      img: Blog5,
+      name: "Jaydon George",
+      title: "Lorem ipsum dolor sit amet consectetur. Morbi nibh ut in quis et",
+      desc: "Lorem ipsum dolor sit amet consectetur. Morbi nibh ut in quis et hendrerit est. At sem eu dolor sed id adipiscing viverra.",
+      link: "Read More",
+      slug: "five-blog-post",
+    },
+    {
+      img: Blog6,
+      name: "Jaydon George",
+      title: "Lorem ipsum dolor sit amet consectetur. Morbi nibh ut in quis et",
+      desc: "Lorem ipsum dolor sit amet consectetur. Morbi nibh ut in quis et hendrerit est. At sem eu dolor sed id adipiscing viverra.",
+      link: "Read More",
+      slug: "six-blog-post",
+    },
+  ]
   return (
-    <>
+    <main>
+      {/* Section Fold 1 Start */}
       <section>
-        <div className="relative z-10 md:py-[60px] py-[40px]">
+        <div className="relative z-10 lg:py-[100px] md:py-[60px] py-[40px]">
           <div className="container">
             <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-y-0 gap-y-10 items-center">
               <div className="text-black max-w-[600px]">
@@ -41,6 +74,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Section Fold 1 End */}
+
+      {/* Section Fold 2 Start */}
       <section>
         <div className="relative z-10 overflow-hidden xl:py-0 lg:py-[100px] md:py-[80px] py-[60px]">
           <img
@@ -76,6 +112,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Section Fold 2 End */}
+
+      {/* Section Fold 3 Start */}
       <section>
         <div className="md:py-[80px] sm:py-[60px] py-[40px]">
           <div className="container">
@@ -109,6 +148,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Section Fold 3 End */}
+
+      {/* Section Fold 4 Start */}
       <section>
         <div className="relative z-10 overflow-hidden xl:py-0 lg:py-[100px] md:py-[80px] py-[60px]">
           <img
@@ -141,6 +183,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Section Fold 4 End */}
+
+      {/* Section Fold 5 Start */}
       <section>
         <div className="relative py-[40px]">
           <div className="container">
@@ -171,6 +216,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Section Fold 5 End */}
+
+      {/* Section Fold 6 Start */}
       <section>
         <div className="relative lg:py-[100px] md:py-[80px] py-[60px] bg-secondary/10">
           <div className="container">
@@ -194,6 +242,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Section Fold 6 End */}
+
+      {/* Section Fold 7 Start */}
       <section>
         <div className="relative overflow-hidden xl:pt-[100px] xl:pb-[40px] md:py-[80px] py-[60px]">
           <img
@@ -222,6 +273,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Section Fold 7 End */}
+
+      {/* Section Fold 8 Start */}
       <section>
         <div className="xl:pt-[100px] md:py-[80px] sm:py-[60px] py-[40px]">
           <div className="container">
@@ -229,7 +283,7 @@ const Home = () => {
               <span className="block text-primary md:text-[22px] sm:text-[18px] text-[16px] font-semibold leading-tight">
                 Testimonials
               </span>
-              <h2 className="lg:text-[36px] md:text-[30px] sm:text-[20px] text-[18px] font-bold leading-tight sm:mt-4 mt-3">
+              <h2 className="lg:text-[40px] md:text-[30px] text-[22px] font-bold leading-tight sm:mt-4 mt-3">
                 Our Customers Love What We Do
               </h2>
             </div>
@@ -250,7 +304,7 @@ const Home = () => {
                   key={i}
                   className="relative z-10 grow-0 shrink-0 basis-full text-center"
                 >
-                  <span className="block bg-primary/10 absolute inset-[80px_0_0_0] -z-10 xl:w-[30%] lg:w-[40%] md:w-[50%] w-[70%] mx-auto h-full"></span>
+                  <span className="block bg-primary/10 absolute inset-[80px_0_0_0] -z-10 xl:w-[30%] lg:w-[40%] md:w-[50%] sm:w-[70%] mx-auto h-full"></span>
                   <img src={Avater} alt="avater" className="mx-auto" />
                   <img src={SemiCol} alt="icon" className="mx-auto my-4" />
                   <p className="text-secondary lg:text-[16px] text-[14px] leading-normal font-medium max-w-[1000px] mx-auto">
@@ -272,19 +326,76 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Section Fold 8 End */}
+
+      {/* Section Fold 9 Start */}
       <section>
-        <div className="">
+        <div className="py-[60px] md:bg-transparent bg-primary">
           <div className="container">
-            <div className="bg-primary">
-              <div className="flex items-center justify-between max-w-[1150px] mx-auto text-white h-[170px]">
-                <h2 className="2xl:text-[50px] xl:text-[45px] lg:text-[35px] md:text-[30px] text-[25px] font-bold leading-tight">Ready For Your Next Hire?</h2>
+            <div className="md:bg-primary">
+              <div className="flex flex-wrap items-center justify-between 2xl:max-w-[1150px] xl:max-w-[1000px] lg:max-w-[800px] md:max-w-[600px] mx-auto text-white sm:h-[170px] gap-y-5">
+                <h2 className="2xl:text-[50px] xl:text-[45px] lg:text-[35px] md:text-[30px] text-[28px] font-bold leading-tight">
+                  Ready For Your Next Hire?
+                </h2>
                 <CTA css="!text-primary !bg-white mx-auto !border-white hover:!text-white hover:!bg-transparent px-12" />
               </div>
             </div>
           </div>
         </div>
       </section>
-    </>
+      {/* Section Fold 9 End */}
+
+      {/* Section Fold 10 Start */}
+      <section>
+        <div className="md:py-[80px] py-[60px]">
+          <div className="container">
+            <div className="text-center md:mb-[80px] mb-[40px]">
+              <h2 className="lg:text-[40px] md:text-[30px] text-[22px] font-bold leading-tight sm:mt-4 mb-3">
+                Hiring Resources For Every Step Of The Process
+              </h2>
+              <p className="sm:text-[16px] text-[14px] font-medium leading-normal text-secondary max-w-[580px] mx-auto">
+                Lorem ipsum dolor sit amet consectetur. Morbi nibh ut in quis
+                ethendrerit est. At sem eu dolor sed id adipiscing viverra.
+              </p>
+            </div>
+            <ul className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center gap-x-5 gap-y-5">
+              {data &&
+                data?.map((post, index) => (
+                  <li
+                    key={index}
+                    className="shadow-[8px_11px_19px_rgba(121,_138,_164,_0.15)] border border-[rgba(121,_138,_164,_0.2)] rounded-[20px] p-1"
+                  >
+                    <img src={post.img} alt={post.title} className="w-full" />
+                    <div className="2xl:px-4 px-2 my-4">
+                      <span className="inline-block bg-orange font-bold text-sm leading-tight px-3 py-1 rounded-full">
+                        {post.name}
+                      </span>
+                      <h4 className="lg:text-[20px] text-[17px] leading-normal font-bold my-3">
+                        {post.title}
+                      </h4>
+                      <p className="text-[15px] leading-normal font-medium text-secondary">
+                        {post.desc}
+                      </p>
+                      <div className="flex items-center justify-between mt-5">
+                        <Link
+                          to={`/blogs/${post.slug}`}
+                          className="block text-[15px] leading-normal font-bold text-primary"
+                        >
+                          {post.link}
+                        </Link>
+                        <span className="block text-[15px] leading-normal font-medium text-secondary">
+                          May 12, 2023
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+      {/* Section Fold 10 End */}
+    </main>
   )
 }
 

@@ -1,7 +1,7 @@
 // Router DOM
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import { BlogList, BlogPost, Header } from "../components"
-import { Home, NotFound } from "../pages"
+import { BlogList, BlogPost, Footer, Header } from "@/components"
+import { HelpCenter, Home, NotFound, PrivacyPolicy, TermsAndConditions } from "../pages"
 // Pages
 
 // Components
@@ -17,10 +17,10 @@ const Routers = () => {
         <Route path="forgot-password" />
         <Route path="reset-password" />
         <Route path="subscription" />
-        <Route path="terms-and-conditions" />
+        <Route path="terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="pricing" />
-        <Route path="help" />
-        <Route path="privacy-policy" />
+        <Route path="help-center" element={<HelpCenter/>} />
+        <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="blogs">
           <Route index element={<BlogList />} />
           <Route path=":slug" element={<BlogPost />} />
@@ -42,6 +42,7 @@ const Routers = () => {
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </Router>
   )
 }
