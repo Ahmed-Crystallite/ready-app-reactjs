@@ -1,10 +1,18 @@
 // Router DOM
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import { BlogList, BlogPost, Footer, Header } from "@/components"
-import { HelpCenter, Home, NotFound, PrivacyPolicy, TermsAndConditions } from "../pages"
-// Pages
 
 // Components
+import { BlogList, BlogPost, Footer, Header } from "@/components"
+
+// Pages
+import {
+  FindCandidates,
+  HelpCenter,
+  Home,
+  NotFound,
+  PrivacyPolicy,
+  TermsAndConditions,
+} from "../pages"
 
 const Routers = () => {
   return (
@@ -19,7 +27,7 @@ const Routers = () => {
         <Route path="subscription" />
         <Route path="terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="pricing" />
-        <Route path="help-center" element={<HelpCenter/>} />
+        <Route path="help-center" element={<HelpCenter />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="blogs">
           <Route index element={<BlogList />} />
@@ -27,7 +35,7 @@ const Routers = () => {
         </Route>
         {/* Dashboard Pages */}
         <Route path="dashboard" />
-        <Route path="findcandidates" />
+        <Route path="find-candidates" element={<FindCandidates />} />
         <Route path="connections" />
         <Route path="message" />
         <Route path="profile">
