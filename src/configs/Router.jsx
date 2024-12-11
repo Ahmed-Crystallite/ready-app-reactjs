@@ -11,6 +11,8 @@ import {
   Home,
   NotFound,
   PrivacyPolicy,
+  Subscription,
+  SubscriptionPlan,
   TermsAndConditions,
 } from "../pages"
 
@@ -24,7 +26,10 @@ const Routers = () => {
         <Route path="signup" />
         <Route path="forgot-password" />
         <Route path="reset-password" />
-        <Route path="subscription" />
+        <Route path="subscription">
+          <Route index element={<Subscription/>} />
+          <Route path=":slug" element={<SubscriptionPlan/>} />
+        </Route>
         <Route path="terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="pricing" />
         <Route path="help-center" element={<HelpCenter />} />
