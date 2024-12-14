@@ -19,7 +19,7 @@ const Subscription = () => {
 
   return (
     <section>
-      <div className="relative z-10 lg:py-[100px] md:py-[80px] py-[60px]">
+      <div className="relative z-10 pt-[200px] lg:pb-[100px] md:pb-[80px] pb-[60px]">
         <img src={BG} alt="bg" className="absolute -z-10 w-full h-full object-cover object-center inset-0 " />
         <div className="container">
           <div className="max-w-[1200px] mx-auto">

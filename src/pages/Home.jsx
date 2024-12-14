@@ -56,7 +56,7 @@ const Home = () => {
     <main>
       {/* Section Fold 1 Start */}
       <section>
-        <div className="relative z-10 lg:py-[100px] md:py-[60px] py-[40px]">
+        <div className="relative z-10 pt-[200px] lg:pb-[100px] md:pb-[60px] pb-[40px]">
           <div className="container">
             <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-y-0 gap-y-10 items-center">
               <div className="text-black max-w-[600px]">

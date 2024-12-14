@@ -2,7 +2,7 @@ import { Accordions } from "@/components"
 const HelpCenter = () => {
   return (
     <section>
-      <div className="xl:py-[100px] lg:py-[80px] md:py-[60px] py-[40px]">
+      <div className="pt-[200px] xl:pb-[100px] lg:pb-[80px] md:pb-[60px] pb-[40px]">
         <div className="container">
           <div className="max-w-[900px] mx-auto">
             <div className="text-center">

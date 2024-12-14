@@ -42,7 +42,7 @@ const BlogPost = () => {
 
   if (loading) {
     return (
-      <div className="flex flex-col justify-center items-center h-[calc(100vh_-_150px)]">
+      <div className="flex flex-col justify-center items-center h-screen">
         <div className="container">
           <span className="block lg:text-6xl md:text-4xl text-3xl leading-normal font-bold text-primary mb-5 text-center capitalize">
             Loading...

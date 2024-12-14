@@ -9,8 +9,10 @@ import {
   FindCandidates,
   HelpCenter,
   Home,
+  Login,
   NotFound,
   PrivacyPolicy,
+  SignUp,
   Subscription,
   SubscriptionPlan,
   TermsAndConditions,
@@ -22,13 +24,13 @@ const Routers = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="login" />
-        <Route path="signup" />
+        <Route path="login" element={<Login />} />
+        <Route path="sign-up" element={<SignUp/>} />
         <Route path="forgot-password" />
         <Route path="reset-password" />
         <Route path="subscription">
-          <Route index element={<Subscription/>} />
-          <Route path=":slug" element={<SubscriptionPlan/>} />
+          <Route index element={<Subscription />} />
+          <Route path=":slug" element={<SubscriptionPlan />} />
         </Route>
         <Route path="terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="pricing" />

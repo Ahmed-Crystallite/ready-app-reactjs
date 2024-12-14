@@ -113,7 +113,7 @@ const BlogList = () => {
 
   return (
     <section>
-      <div className="py-[60px]">
+      <div className="pt-[200px] pb-[60px]">
         <div className="container">
           <div className="text-center">
             <h1 className="xl:text-[40px] lg:text-[30px] text-[25px] leading-tight font-bold mb-3 text-black">

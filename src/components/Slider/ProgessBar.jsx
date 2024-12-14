@@ -54,16 +54,8 @@ export default function AutoPlaySlider({
       </div>
       {arrows && (
         <div className={`flex gap-10 justify-between mt-10 ${arrowsCss}`}>
-          <PrevButton
-            onClick={onPrevButtonClick}
-            disabled={prevBtnDisabled}
-            classes="disabled:opacity-40"
-          />
-          <NextButton
-            onClick={onNextButtonClick}
-            disabled={nextBtnDisabled}
-            classes="disabled:opacity-40"
-          />
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
       )}
       <div className="relative h-[0.2rem] -top-4 w-full lg:max-w-[50%] max-w-[70%] rounded-[1.8rem] overflow-hidden bg-secondary/30 self-center justify-self-center">
