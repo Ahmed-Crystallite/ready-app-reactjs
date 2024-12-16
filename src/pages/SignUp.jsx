@@ -47,19 +47,19 @@ const SignUp = () => {
                 Enter your details to create your account
               </p>
               <form method="post" className="py-[40px]">
-                <div className="relative mb-3">
+                <div className="relative mb-5">
                   <label htmlFor="image" className="cursor-pointer">
                     {preview ? (
                       <img
                         src={preview}
                         alt="Selected"
-                        className="w-[95px] h-[94px] object-cover object-top rounded"
+                        className="w-[95px] h-[94px] shadow-[0px_5px_20px_rgba(121,_138,_164,_0.09)] object-cover object-top rounded"
                       />
                     ) : (
                       <img
                         src={File}
                         alt="icon"
-                        className="w-[95px] h-[94px] object-cover object-top rounded"
+                        className="w-[95px] shadow-[0px_5px_20px_rgba(121,_138,_164,_0.05)] h-[94px] object-cover object-top rounded"
                       />
                     )}
                   </label>
@@ -93,11 +93,11 @@ const SignUp = () => {
                   name="email"
                   required
                   id="email"
-                  placeholder="Email Address"
+                  placeholder="Email"
                   className="w-full px-5 py-3 border border-[#798AA420] rounded-md shadow-[0px_5px_20px_rgba(121,_138,_164,_0.05)] text-black font-medium placeholder:text-[#9399A6] focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3"
                 />
                 <select
-                  className="w-full px-5 py-3 border border-gray-300 rounded-md text-[#9399A6] font-medium placeholder:text-[#9399A6] focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3"
+                  className="w-full px-5 py-3 border border-[#798AA420] rounded-md text-[#9399A6] font-medium placeholder:text-[#9399A6] focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3"
                   required
                 >
                   <option value={locations}>Location</option>
@@ -107,6 +107,7 @@ const SignUp = () => {
                     </option>
                   ))}
                 </select>
+                <textarea name="message" id="message" placeholder="About Comapny" className="w-full resize-none px-5 py-3 h-[150px] border border-[#798AA420] rounded-md shadow-[0px_5px_20px_rgba(121,_138,_164,_0.05)] text-black font-medium placeholder:text-[#9399A6] focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                 <input
                   type="password"
                   name="password"
@@ -115,8 +116,7 @@ const SignUp = () => {
                   placeholder="Password"
                   className="w-full px-5 py-3 border border-[#798AA420] rounded-md shadow-[0px_5px_20px_rgba(121,_138,_164,_0.05)] text-black font-medium placeholder:text-[#9399A6] focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <div className="flex items-center mt-5 justify-between">
-                  <div className="flex gap-x-3 items-center">
+                  <div className="flex gap-x-3 items-center mt-5">
                     <input
                       type="checkbox"
                       name="remember"
@@ -127,34 +127,20 @@ const SignUp = () => {
                       htmlFor="remember"
                       className="w-max text-[15px] leading-tight text-[#9399A6] font-medium"
                     >
-                      Remember
+                      I accept the <span className="text-primary border-b border-primary">Terms</span> of use & <span className="text-primary border-b border-primary">Privacy Policy</span>
                     </label>
                   </div>
-                  <Link
-                    to="/forgot-password"
-                    className="text-[#ED1212] text-[15px] leading-tight font-medium"
-                  >
-                    Forgot Password?
-                  </Link>
-                </div>
                 <button
                   type="submit"
-                  className="block w-full my-5 py-4 bg-primary/80 text-white font-semibold rounded-md hover:bg-primary focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="block w-full mt-10 py-4 bg-primary/80 text-white font-semibold rounded-md hover:bg-primary focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   Sign up
                 </button>
-                <button
-                  type="button"
-                  className="flex items-center justify-center gap-x-3 w-full py-4 bg-[#D4D4D435] text-[#878787] font-bold rounded-md hover:bg-[#D4D4D4] focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-[0px_5px_20px_rgba(121,_138,_164,_0.05)]"
-                >
-                  <img src={Google} alt="icon" />
-                  <span>Sign in with Google</span>
-                </button>
               </form>
-              <span className="block text-center text-[15px] leading-tight font-medium">
-                Don’t have an account{" "}
-                <Link to="/sign-up" className="text-primary">
-                  Sign Up
+              <span className="block text-center text-[15px] text-[#9399A6] leading-tight font-medium">
+              I have already an account
+                <Link to="/login" className="text-primary ms-1">
+                Login
                 </Link>
               </span>
             </div>
